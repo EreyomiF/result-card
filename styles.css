@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "HankenGrotesk"; /* Choose a name for your font */
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("woff2"),
+       url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("woff");
+  /* Add more formats if needed, like ttf or svg */
+}
+
+/* Apply the font to specific elements */
+body {
+  font-family: "HankenGrotesk", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card-container {
+    display: flex;
+    align-items: center;
+flex-direction: column; 
+ }
+
+  .card {
+    position: relative; /* Add position relative */
+    width: 100%; /* Adjust card width */
+    max-width: 600px; /* Increase max-width */
+    height: 300px; /* Adjust card height */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0; /* Remove margin */
+    overflow: hidden; /* Hide overflow content */
+
+  }
+
+  .circle {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    width: 100px; /* Increase circle size */
+    height: 100px; /* Increase circle size */
+    background-color: rgb(7, 7, 126);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column; /* Display circle-content and circle-label vertically */
+    box-shadow: 0 6px 10px rgba(43, 3, 95, 0.3); /* Increase the shadow values for a more pronounced effect */
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .circle-content {
+    color: white;
+    font-weight: bold;
+    
+  }
+
+  @media (min-width: 480px) {
+    .card-container {
+      flex-direction: row;
+      
+    }
+
+    .card {
+      flex: 1;
+      max-width: none;
+      height: 300px; /* Increase card height */
+      order: 2; /* Change order for larger screens */
+    }
+
+    .card:nth-child(1) {
+      order: 1; /* Change order for larger screens */
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card {
+      margin-bottom: -10px; /* Add negative margin for close stacking */
+    }
+  }
+
+
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .tab {
+    padding: 5px 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    text-decoration: none;
+  overflow: hidden;
+}
+
+
+  
+  .btn { 
+    margin-top: 30px;
+      width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 1rem; /* Default Bootstrap button border radius */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+
+  .btn-secondary {
+    background-color: #0e243c;
+    color: white;
+    border-color: #10273e;
+  }
+
+  .btn:hover {
+    background-color: rgb(240, 87, 111);
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+
+  .card-content{
+    margin-top: 135px;
+    text-align: center;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+
+  
+  }
+  .circle-label {
+    color: white;
+  }
